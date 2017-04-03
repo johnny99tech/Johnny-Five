@@ -4,7 +4,7 @@ Linguagem:
 Johnny-Five
 ~~~~
 Nome:
-Sara Silva da Silva -  - 20131011110185;
+Sara Silva da Silva - saremedss - 20131011110185;
 Jonathan Cardoso F. de Moura - johnny99tech - 20141011110131;
 Jules Brendo - ;
 ~~~~
@@ -14,18 +14,18 @@ Jules Brendo - ;
 
 > * Paradgima da linguagem (procedural, orientado a objetos, funcional, etc): Johnny-Five é uma estrutura de programação JavaScript Arduino de código aberto para robótica. Estrutura para controlar componentes de hardware através de uma variedade de microprocessadores populares e plataformas de sistema em um chip usando JavaScript. Johnny-Five traz paradigmas e técnicas familiares de programação JavaScript para o mundo real, com uma API idiomática, orientada a objetos, semelhante a jQuery, que torna o processo de mover um braço robótico como o de animar um elemento em uma página da web. Com o suporte incorporado para placas compatíveis com protocolo Firmata e um conjunto de outros IO-Plugins, o Johnny-Five faz o trabalho de abstrair a comunicação de modo que os componentes se comportem o mesmo independentemente da plataforma que está sendo usada.
 
-> * Data de criação:Lançado pela Bocoup em 2012 por Rick Waldron.
+> * Data de criação: Lançado pela Bocoup em 2012 por Rick Waldron.
 
-> * Principal mantenedor (Oracle, Microsoft, Google, etc): Bocoup
+> * Principal mantenedor (Oracle, Microsoft, Google, etc): Bocoup.
 
 ## "Instalação e uso"
 
-> * Descrever de forma resumida como instalar, demonstrando os comandos (ver Markdown sobre códigos): instalar o johnny-five:npm install johnny-five;Executando Olá Mundo
+> * Descrever de forma resumida como instalar, demonstrando os comandos (ver Markdown sobre códigos): instalar o johnny-five: npm install johnny-five;
 
 
 > * Descrever de forma resumida como usar (compilar e executar), demonstrando os comandos (ver Markdown sobre códigos)
 ```
-Olá Mundo!
+"Olá Mundo" com um simples LED piscando; O seguinte demonstra como fazer isso com o quadro Johnny-Five.
 
 var five = require("johnny-five");
 var board = new five.Board();
