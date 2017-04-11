@@ -16,7 +16,7 @@ Nome: Sara Silva da Silva - saremedss - 20131011110185;
 
 > * Principal mantenedor (Oracle, Microsoft, Google, etc): Bocoup.
 
-## "Instalação e uso"
+## Instalação e uso
 
 > * Descrever de forma resumida como instalar, demonstrando os comandos (ver Markdown sobre códigos): instalar o johnny-five: npm install johnny-five;
 
