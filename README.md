@@ -33,3 +33,44 @@ board.on("ready", function() {
   led.blink(500);
 });
 ```
+
+## Sintaxe básica
+
+/*Descrever sintaxe básica da linguagem contendo explicação e exemplo para:*/
+
+> *  Variáveis e constantes - inicialização e comandos de atribuição
+> *  Operadores relacionais e lógicos
+> *  Operadores aritméticos
+> *  Estruturas de controle condicional
+> *  Estruturas de repetição
+> *  Vetores, matrizes e strings
+> *  Funções
+
+## Sintaxe OO
+
+/*Descrever sintaxe orientada a objetos da linguagem contendo explicação e exemplo para:*/
+> Sintaxe orientada a objetos da linguagem contendo explicação:
+
+> *  Classes
+> *  Objetos
+> *  Atributos (visibilidade: privado e público, escopo: classe e objeto)
+> *  Métodos (visibilidade: privado e público, escopo: classe e objeto)
+> *  Construtores
+> *  Herança
+> *  Polimorfismo
+> *  Sobrecarga
+
+> > Descrever sintaxe básica de exceções:
+
+> *  Categorias de exeções
+> *  Captura e lançamento de exceções
+> *  Criar novas exeções
+
+## Sintaxe Funcional
+
+> Descrever sintaxe básica do paradigma da linguagem contendo explicação e exemplo.
+
+
+
+
+
