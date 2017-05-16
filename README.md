@@ -270,10 +270,4 @@ board.on("ready", function() {
 > *  Criar novas exeções
 
 ## Sintaxe Funcional
-
 > Descrever sintaxe básica do paradigma da linguagem contendo explicação e exemplo.
-
-
-
-
-
