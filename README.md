@@ -111,13 +111,144 @@ board.on("ready", function() {
 
 
 > *  Operadores relacionais e lógicos:
+      > > Relacionais: Os Operadores Relacionais são:
+      >	maior que
+      <=	menor ou igual
+      <	menor que
+      <=	menor ou igual
+      ==	igual a
+      !=	diferente de
+
+      > > Lógicos:
+      && -
+      a==3 && b<10 // retorna verdadeiro
+      a!=3 && b==5 // retorna falso
+      || -
+      a==3 || b<10 // retorna verdadeiro
+      a!=3 || b==5 // retorna verdadeiro
+      a==1 || b==3 // retorna falso
+      ! -
+      ! (a==3) // retorna falso
+      ! (a!=3) // retorna verdadeiro
       
 > *  Operadores aritméticos
+      > > Condicional - if / else
+      ~~~~
+      if (n == 1) {
+          // executa este bloco if
+      } else if () {
+          // executa este bloco else if
+      } else {
+          // executa este bloco else
+      }
+      ~~~~
+      > > Operador Condicional Ternário
+      É possível obter resultados semelhantes usando o operador condicional ternário condition ? expr1 : expr2.
+      resultado = (a > b) ? "a é maior que b" : "b é maior que a";
+      O código acima é equivalente ao de baixo:
+      ~~~~
+      if (a > b) {
+          resultado = "a é maior que b";
+      } else {
+          resultado = "b é maior que a";
+      }
+      ~~~~
+      > > Condicional - switch
+      ~~~~
+      switch(action) {
+          case 'draw':
+              drawit();
+              break;
+          case 'eat':
+              eatit();
+              break;
+          default:
+              donothing();
+      }
+      ~~~~
 > *  Estruturas de controle condicional
-> *  Estruturas de repetição
-> *  Vetores, matrizes e strings
-> *  Funções
+      Agora que você já sabe as estruturas condicionais if, else if e else, podemos apimentar um pouco mais seu código com algumas condições mais complexas.
+      > > If (se)
+      Para utilizar a estrutura if, precisamos da palavra if + ( pelo menos uma condição entre parênteses ) + { quantas ações forem necessárias entre colchetes }.
+      ~~~~
+      // Variável booleana verdadeira
+      var sol = true;
 
+      // Condição
+      if ( sol ) {
+            // Ação
+            alert('Vou nadar!');
+      }
+      ~~~~
+      > > If … else
+      ~~~~
+      Também pode ocorrer de você ter uma ação contrária para ser executada, caso sua ação principal não seja verdadeira, por exemplo:
+      Se o sol sair hoje, vou nadar; caso contrário, vou ler.
+      Nesse caso temos duas ações dependendo de uma condição, uma das duas terá que ser executada.
+      Para suprir essa necessidade, completamos a estrutura condicional if com else (senão):
+      ~~~~
+      // Variável booleana falsa
+      var sol = false;
+
+      // Condição
+      if ( sol ) {
+            alert('Vou nadar');
+      } else {
+            alert('Vou ler');
+      }
+      ~~~~
+      > > If … else if … else
+      Outro fato que vai ocorrer constantemente em suas aplicações Javascript, é o fato de existir mais de uma condição, por exemplo:
+      Se eu acordar de madrugada, vou ler; se acordar de manhã, vou estudar; se acordar tarde vou assistir filme.
+      Nesse caso podemos utilizar um else if ( outra condição ):
+      ~~~~
+      // Variáveis booleanas
+      var madrugada = false;
+      var cedo = true;
+      var tarde = false;
+
+      // Condição
+      if ( madrugada ) {
+            alert('Vou ler');
+      } else if ( cedo ) {
+            alert('Vou estudar');
+      } else {
+            alert('Vou assistir filme');
+      }
+      ~~~~
+      
+> *  Estruturas de repetição
+      > > for
+      ~~~~
+      for (var i = 0; i < 5; i++) {
+          // Will execute 5 times
+      }
+      ~~~~
+> *  Vetores, matrizes e strings
+      > > Arrays
+      Em JavaScript, arrays são um tipo especial de objeto que representam um conjunto ordenado de valores numerados.
+      ~~~~
+      var a = new Array();
+      a[0] = "dog";
+      a[1] = "cat";
+      a[2] = "hen";
+      a.length // 3
+      ~~~~
+      Uma forma mais conveniente de utilização de um array, na verdade a mais usada:
+      ~~~~
+      var a = ["dog", "cat", "hen"];
+      a.length // 3
+      ~~~~
+      
+> *  Funções
+      Uma função é um objeto que tem código executável associado. Uma função pode ser chamada para executar esse código executável e retornar um valor calculado.
+      ~~~~
+      function add(x, y) {
+          var total = x + y;
+          return total;
+      }
+      ~~~~
+      
 ## Sintaxe OO
 
 /*Descrever sintaxe orientada a objetos da linguagem contendo explicação e exemplo para:*/
