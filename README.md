@@ -39,10 +39,12 @@ board.on("ready", function() {
 /*Descrever sintaxe básica da linguagem contendo explicação e exemplo para:*/
 
 > *  Variáveis e constantes - inicialização e comandos de atribuição : As variáveis são declaradas com a palavra chave var, como segue:
+      ~~~~
       ```   
       var i;
       var sum;
       ```
+      ~~~~
       Também é possível declarar varias variáveis com a mesma palavra chave var:
       ```
       var i, sum;
