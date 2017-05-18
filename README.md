@@ -39,28 +39,22 @@ board.on("ready", function() {
 /*Descrever sintaxe básica da linguagem contendo explicação e exemplo para:*/
 
 > *  Variáveis e constantes - inicialização e comandos de atribuição : As variáveis são declaradas com a palavra chave var, como segue:
-      ~~~
       ```   
       var i;
       var sum;
       ```
-      ~~~
       Também é possível declarar varias variáveis com a mesma palavra chave var:
-      ~~~
       ```
       var i, sum;
       ```
-      ~~~
       E pode-se combinar a declaração da variável com sua inicialização:
-      ~~~
       ```
       var i = 0, j = 0, k = 0;
       var nome = "Fulano";
       ```
-      ~~~
       Antes de usar uma variável em um programa JavaScript, deve declará-la.
-      ~~~
-      >> Tipos
+      
+> > Tipos
       Os tipos em JavaScript podem ser divididos em duas categorias: tipo primitivo e de objeto.~~~
       Os tipo primitivos incluem números, strings e valores booleanos.~~~
       Os valores especiais null e undefined são valores primitivos mas não são números, nem string e nem booleanos.~~~
@@ -71,7 +65,7 @@ board.on("ready", function() {
       typeof "foo"; // 'string'
       typeof 123;   // 'number'
       ```   
-      >> Números
+> > Números
       ~~~
       Ao contrário de muitas linguagens, JavaScript não faz distinção entre valores inteiros e valores em ponto flutuante. Todos os números em JavaScript são representados como valores em ponto flutuante.
       ~~~
@@ -86,7 +80,7 @@ board.on("ready", function() {
       100.09
       0.33333
       ``` 
-      >> Strings
+> > Strings
       ~~~
       Para incluir uma string literal em um programa JavaScript, basta colocar os caracteres da string dentro de um par combinado de aspas simples ou duplas.~~~
 
@@ -106,7 +100,7 @@ board.on("ready", function() {
       "palavra".length // 7
       ```
       ~~~
-      >> Booleanos
+> > Booleanos
       ~~~
       Os valores booleanos são representados por true e false.~~~
       >> null e undefined~~~
@@ -114,7 +108,7 @@ board.on("ready", function() {
       Mas também há um segundo valor que indica ausência de valor: undefined.~~~
       O valor indefinido (undefined) representa uma ausência mais profunda, é o valor de variáveis que não foram inicializadas.~~~
 
-      >> Conversão
+> > Conversão
       ~~~
       A linguagem é muito flexível quanto aos tipos de valores que exige.
 
@@ -128,16 +122,19 @@ board.on("ready", function() {
 
 
 > *  Operadores relacionais e lógicos:
-      >> Relacionais: Os Operadores Relacionais são:
-      >	maior que
-      <=	menor ou igual
-      <	menor que
-      <=	menor ou igual
-      ==	igual a
-      !=	diferente de
-
-      >> Lógicos: && 
+      > > Relacionais: Os Operadores Relacionais são:
+      ```css
+            >	maior que
+            <=	menor ou igual
+            <	menor que
+            <=	menor ou igual
+            ==	igual a
+            !=	diferente de
+      ```
       
+      > > Lógicos: && 
+      
+      ```css
       a==3 && b<10 // retorna verdadeiro
       a!=3 && b==5 // retorna falso
       || -
@@ -147,10 +144,11 @@ board.on("ready", function() {
       ! -
       ! (a==3) // retorna falso
       ! (a!=3) // retorna verdadeiro
+      ```
       
 > *  Operadores aritméticos
-      >> Condicional - if / else
-      ~~~~
+      > > Condicional - if / else
+      ```css
       if (n == 1) {
           // executa este bloco if
       } else if () {
@@ -158,20 +156,22 @@ board.on("ready", function() {
       } else {
           // executa este bloco else
       }
-      ~~~~
-      >> Operador Condicional Ternário
+      ```
+      
+      > > Operador Condicional Ternário
       É possível obter resultados semelhantes usando o operador condicional ternário condition ? expr1 : expr2.
       resultado = (a > b) ? "a é maior que b" : "b é maior que a";
       O código acima é equivalente ao de baixo:
-      ~~~~
+      ```css
       if (a > b) {
           resultado = "a é maior que b";
       } else {
           resultado = "b é maior que a";
       }
-      ~~~~
+      ```
+
       >> Condicional - switch
-      ~~~~
+      ```css
       switch(action) {
           case 'draw':
               drawit();
@@ -182,13 +182,14 @@ board.on("ready", function() {
           default:
               donothing();
       }
-      ~~~~
+      ```
+
 > *  Estruturas de controle condicional
       Agora que você já sabe as estruturas condicionais if, else if e else, podemos apimentar um pouco mais seu código com algumas condições mais complexas.
       > > If (se)
       Para utilizar a estrutura if, precisamos da palavra if + ( pelo menos uma condição entre parênteses ) + { quantas ações forem necessárias entre colchetes }.
       ~~~~
-      ```
+      ```css
       // Variável booleana verdadeira
       var sol = true;
 
@@ -208,7 +209,7 @@ board.on("ready", function() {
       Nesse caso temos duas ações dependendo de uma condição, uma das duas terá que ser executada.
       Para suprir essa necessidade, completamos a estrutura condicional if com else (senão):
       ~~~~
-      ```
+      ```css
       // Variável booleana falsa
       var sol = false;
 
@@ -253,7 +254,7 @@ board.on("ready", function() {
       ```
       ~~~~
 > *  Vetores, matrizes e strings
-      >> Arrays
+      > > Arrays
       Em JavaScript, arrays são um tipo especial de objeto que representam um conjunto ordenado de valores numerados.
       ~~~~
       ```
@@ -315,7 +316,7 @@ board.on("ready", function() {
       ```
       ~~~~
       Para passar parâmetros para o construtor da classe.
-      ~~~~
+      
       ```
       function MyClasse(value) {
           this.idade = value;
@@ -326,22 +327,39 @@ board.on("ready", function() {
       }
 
       ```
-      ~~~~
-> *  Objetos
-      ~~~~
       
+> *  Objetos
+      ~~~~   
 > *  Atributos (visibilidade: privado e público, escopo: classe e objeto)
-
 > *  Métodos (visibilidade: privado e público, escopo: classe e objeto)
 > *  Construtores
 > *  Herança
 > *  Polimorfismo
 > *  Sobrecarga
 
-> > Descrever sintaxe básica de exceções:
+### Sintaxe básica de exceções:
 
-> *  Categorias de exeções
+> *  Categorias de exceções
+      > > throw
+      Use a declaração throw para lançar uma exceção. Quando você lança uma exceção, você especifica a expressão contendo o valor a ser lançado:
+      ```
+      throw true;       // tipo booleano
+      throw {toString: function() { return "Eu sou um objeto!"; } };
+      ```
+      > > try...catch
+      Declaração try...catch
+      A declaração try...catch coloca um bloco de declarações em try, e especifica uma ou mais respostas para uma exceção lançada. Se uma exceção é lançada, a declaração try...catch pegá-a.
+      ```
+      try {
+        throw "myException"; // lança  uma exceção
+      }
+      catch (e) {
+        // declarações de lidar com as exceções
+        logMyErrors(e); // passar a exceção para o manipulador de erro
+      }
+      ```
 > *  Captura e lançamento de exceções
+
 > *  Criar novas exeções
 
 ## Sintaxe Funcional
