@@ -43,10 +43,15 @@ board.on("ready", function() {
 });
 ```
  
-Para execução é necessária apenas a chamada do arquivo, e no Arduino por exemplo ele irá acender a led:
+Para execução é necessária apenas a chamada do arquivo, e no [Arduino](http://www.obomprogramador.com/2014/11/arduino-etilico-2-vinganca-do-javascript.html) por exemplo ele irá acender a led:
+
 ```
 node OLAMUNDO.js
 ```
+
+[Video acerca do OLAMUNDO.js](http://morvanabonin.org/introducao-arduino-com-node-js-utilizando-johnny-five/)
+
+[Um pouco mais sobre o Arduino](http://www.techtudo.com.br/noticias/noticia/2013/10/o-que-e-um-arduino-e-o-que-pode-ser-feito-com-ele.html)
 
 ## Sintaxe básica
 
@@ -387,3 +392,7 @@ O Johnny-five é convertido para o Javascript que tambem é conhecido por també
         });
       });
 ```
+
+## Refe
+
+
