@@ -125,8 +125,7 @@ Se você usa um valor não booleano onde é esperado um booleano, JavaScript con
 >> Relacionais: Os Operadores Relacionais são:
 ~~~~
 
-css
-@@ -144,23 137,28 @@ A propriedade length determina o tamanho da string.
+A propriedade length determina o tamanho da string.
 ==  igual a
 !=  diferente de
 ~~~~      
@@ -138,7 +137,6 @@ css
 
 a==3 && b<10 // retorna verdadeiro
 a!=3 && b==5 // retorna falso
-
       
 /* ||: ou *\
 
@@ -326,14 +324,14 @@ Declaração: coloca um bloco de declarações em try, e especifica uma ou mais 
       
 > *  Captura e lançamento de exceções
       > > throw
-      Use a declaração throw para lançar uma exceção. Quando você lança uma exceção, você especifica a expressão contendo o valor a ser lançado:
+Use a declaração throw para lançar uma exceção. Quando você lança uma exceção, você especifica a expressão contendo o valor a ser lançado:
       ```
       throw true;       // tipo booleano
       throw {toString: function() { return "Eu sou um objeto!"; } };
       ```
+    
       > > try...catch
-      Declaração try...catch
-      A declaração try...catch coloca um bloco de declarações em try, e especifica uma ou mais respostas para uma exceção lançada. Se uma exceção é lançada, a declaração try...catch pegá-a.
+A declaração try...catch coloca um bloco de declarações em try, e especifica uma ou mais respostas para uma exceção lançada. Se uma exceção é lançada, a declaração try...catch pegá-a.
       ```
       try {
         throw "myException"; // lança  uma exceção
@@ -352,17 +350,20 @@ Declaração: coloca um bloco de declarações em try, e especifica uma ou mais 
       throw MeuErro('Tem um erro', 'colocar a variável a fora do for', index.js:1:6);
 ```
 ## Sintaxe Funcional
->* Sintaxe básica do paradigma da linguagem.
 
-A noção de paradigmas de programação é uma forma de classificar as linguagens de programação de acordo com o estilo de programação  de computadores. Características de várias linguagens de programação determinam quais paradigmas elas pertencem; Como resultado, alguns idiomas caem em apenas em um paradigma, ao passo que outros cair em vários paradigmas.Alguns paradigmas estão preocupados principalmente com a maneira que o código é organizado, como o agrupamento de código em unidades, juntamente com o estado que é modificado pelo código. No entanto, outros estão preocupados principalmente com o estilo de sintaxe e gramática.
+> * Sintaxe básica do paradigma da linguagem
 
-Hoje qualquer linguagem (só entre as mainstream)que possui usam muito, usam vários paradigmas.
-O principal de todas elas (só entre as mainstream) é o imperativo, JS não é diferente, e até pode ser usada na forma procedural (obviamente de forma estruturada).
-O Johnny-five é convertido para o Javascript que tambem é conhecido por também ser orientada a objeto através de protótipos, mas como toda linguagem moderna, usa cada vez mais os paradigmas funcionais, tendo uma forte influência em programação orientada a eventos.
+A noção de paradigmas de programação é uma forma de classificar as linguagens de programação de acordo com o estilo de programação  de computadores. Características de várias linguagens de programação determinam quais paradigmas elas pertencem; Alguns paradigmas estão preocupados principalmente com a maneira que o código é organizado, como o agrupamento de código em unidades, juntamente com o estado que é modificado pelo código. No entanto, outros estão preocupados principalmente com o estilo de sintaxe e gramática.
 
-A linguagem usa tipagem dinâmica (por enquanto) e é usada como script. É dita como tipagem fraca, mas isso não ocorre em todas situações, possuindo tipos primitivos (ao contrário do que dizem os comentários abaixo) e dicionários para preencher os protótipos e simular as classes (nativamente na linguagem). Costuma rodar de forma interpretada, mas fundo é compilada.
+O principal de outros paradigmas é o imperativo, e até pode ser usada na forma procedural (obviamente de forma estruturada).
 
-Exemplo:
+O Johnny-five é convertido para o Javascript que tambem é conhecido por também ser orientada a objeto através de protótipos, mas como toda linguagem moderna, usa cada vez mais os paradigmas funcionais, tendo uma forte influência em programação orientada a eventos. Onde a linguagem usa tipagem dinâmica é usada como script. Costuma rodar de forma interpretada, mas fundo é compilada.
+
+[Exemplo de pulso de LED que enfraquece um LED dentro e fora repetidamente. Requer LED no pino que suporta PWM](http://johnny-five.io/examples/led-pulse/)
+
+```css
+      node eg/led-pulse.js
+```
 
 ```css
       var five = require("johnny-five");
@@ -370,11 +371,19 @@ Exemplo:
 
       board.on("ready", function() {
 
-        // Create a standard `led` component instance
-        var led = new five.Led(13);
+        // Create a standard `led` component
+        // on a valid pwm pin
+        var led = new five.Led(11);
 
-        // "blink" the led in 500ms
-        // on-off phase periods
-        led.blink(500);
+        led.pulse();
+
+        // Stop and turn off the led pulse loop after
+        // 10 seconds (shown in ms)
+        this.wait(10000, function() {
+
+          // stop() terminates the interval
+          // off() shuts the led off
+          led.stop().off();
+        });
       });
 ```
