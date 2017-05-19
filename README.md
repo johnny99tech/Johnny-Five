@@ -114,7 +114,7 @@ JavaScript converte valores de um tipo para outro de forma livre.
 Se um programa espera uma string, por exemplo, e você fornece um número, ele converte o número em string automaticamente.
 Se você usa um valor não booleano onde é esperado um booleano, JavaScript converte adequadamente.
 
-> Operadores relacionais e lógicos:
+>* Operadores relacionais e lógicos:
 >> Relacionais: Os Operadores Relacionais são:
 ~~~~
 
@@ -127,7 +127,6 @@ css
 >> Lógicos: 
 ~~~~
 
-css
 /* &&: e *\
 
 a==3 && b<10 // retorna verdadeiro
@@ -146,8 +145,7 @@ a==1 || b==3 // retorna falso
 ! (a!=3) // retorna verdadeiro
 ~~~~
 
--> *  Operadores aritméticos
-->> * Condicional - if / else
+
 > * Operadores aritméticos
 >> Condicional - if / else
 ~~~~
@@ -164,13 +162,10 @@ css
 resultado = (a > b) ? "a é maior que b" : "b é maior que a";
 @@ -187,7 185,7 @@ A propriedade length determina o tamanho da string.
 }
-~~~~      
-
 
 >> Condicional - switch
 ~~~~   
 
-css
 @@ -203,10 201,12 @@ A propriedade length determina o tamanho da string.
 }
 ~~~~
@@ -183,7 +178,6 @@ Agora que você já sabe as estruturas condicionais if, else if e else, podemos 
 Para utilizar a estrutura if, precisamos da palavra if  ( pelo menos uma condição entre parênteses )  { quantas ações forem necessárias entre colchetes }.
 ~~~~
 
-css
 @@ -219,7 219,7 @@ A propriedade length determina o tamanho da string.
 alert('Vou nadar!');
 }      
@@ -193,6 +187,9 @@ alert('Vou nadar!');
 Também pode ocorrer de você ter uma ação contrária para ser executada, caso sua ação principal não seja verdadeira, por exemplo:
 Se o sol sair hoje, vou nadar; caso contrário, vou ler.
 Nesse caso temos duas ações dependendo de uma condição, uma das duas terá que ser executada.
+
+~~~~
+
 @@ -237,10 237,11 @@ A propriedade length determina o tamanho da string.
 alert('Vou ler');
 }
@@ -225,9 +222,9 @@ Em JavaScript, arrays são um tipo especial de objeto que representam um conjunt
 ~~~~
 
 @@ -297,8 298,6 @@ Uma função é um objeto que tem código executável associado. Uma função po
+~~~~
 
 ## Sintaxe OO
-
 
 > *  Classes
 No Javascript utilizamos uma função para criar a classe.
@@ -268,21 +265,21 @@ logMyErrors(e); // passar a exceção para o manipulador de erro
 > Descrever sintaxe básica do paradigma da linguagem contendo explicação e exemplo.
   ### Sintaxe básica de exceções:
   
- +> * Categorias de exceções
- +>> throw
- +
+ > * Categorias de exceções
+ >> throw
+ 
  +Use a declaração throw para lançar uma exceção. Quando você lança uma exceção, você especifica a expressão contendo o valor a ser lançado:
- +~~~~
- +
+ ~~~~
+ 
         throw true;       // tipo booleano
         throw {toString: function() { return "Eu sou um objeto!"; } };
  
- +~~~~
- +>> try...catch
- +
- +Declaração: coloca um bloco de declarações em try, e especifica uma ou mais respostas para uma exceção lançada. Se uma exceção é lançada, a declaração try...catch pegá-a.
- +~~~~
- +
+ ~~~~
+ >> try...catch
+ 
+ Declaração: coloca um bloco de declarações em try, e especifica uma ou mais respostas para uma exceção lançada. Se uma exceção é lançada, a declaração try...catch pegá-a.
+ ~~~~
+ 
         try {
           throw "myException"; // lança  uma exceção
         }
@@ -291,19 +288,19 @@ logMyErrors(e); // passar a exceção para o manipulador de erro
           logMyErrors(e); // passar a exceção para o manipulador de erro
         }
  
- +~~~~
- +> * Captura e lançamento de exceções
+ ~~~~
+ > * Captura e lançamento de exceções
   
- +> * Criar novas exeções
+ > * Criar novas exeções
   
-  ## Sintaxe Funcional
+## Sintaxe Funcional
   > Descrever sintaxe básica do paradigma da linguagem contendo explicação e exemplo.
 ### Sintaxe básica de exceções:
 
-> Categorias de exceções
-      > >TypeError
-      > > RangeError
-      > > EvalError
+> * Categorias de exceções
+      >>TypeError
+      >> RangeError
+      >> EvalError
       
       ```css
        try {
