@@ -8,9 +8,13 @@ Nome: Sara Silva da Silva - saremedss - 20131011110185;
 ~~~~
 ## Resumo
 
-> * Propósito da linguagem: Johnny-Five é a plataforma JavaScript Robotics & IoT . Lançado pela Bocoup em 2012, Johnny-Five é mantido por uma comunidade de desenvolvedores de software apaixonado e engenheiros de hardware. Mais de 75 desenvolvedores contribuíram para a construção de um ecossistema robusto, extensível e componível. Como muitos dos projetos de construção com a Johnny-Five envolvem conexão física e hardware, também fornecemos extensa documentação e exemplos (com diagramas) de como conectar e depurar componentes no site da Johnny-Five.
+> * Propósito da linguagem
 
-> * Paradgima da linguagem (procedural, orientado a objetos, funcional, etc): Johnny-Five é uma estrutura de programação JavaScript Arduino de código aberto para robótica. Estrutura para controlar componentes de hardware através de uma variedade de microprocessadores populares e plataformas de sistema em um chip usando JavaScript. Johnny-Five traz paradigmas e técnicas familiares de programação JavaScript para o mundo real, com uma API idiomática, orientada a objetos, semelhante a jQuery, que torna o processo de mover um braço robótico como o de animar um elemento em uma página da web. Com o suporte incorporado para placas compatíveis com protocolo Firmata e um conjunto de outros IO-Plugins, o Johnny-Five faz o trabalho de abstrair a comunicação de modo que os componentes se comportem o mesmo independentemente da plataforma que está sendo usada.
+Johnny-Five é a plataforma JavaScript Robotics & IoT . Lançado pela Bocoup em 2012, Johnny-Five é mantido por uma comunidade de desenvolvedores de software apaixonado e engenheiros de hardware. Mais de 75 desenvolvedores contribuíram para a construção de um ecossistema robusto, extensível e componível. Como muitos dos projetos de construção com a Johnny-Five envolvem conexão física e hardware, também fornecemos extensa documentação e exemplos (com diagramas) de como conectar e depurar componentes no site da Johnny-Five.
+
+> * Paradgima da linguagem (procedural, orientado a objetos, funcional, etc)
+
+Johnny-Five é uma estrutura de programação JavaScript Arduino de código aberto para robótica. Estrutura para controlar componentes de hardware através de uma variedade de microprocessadores populares e plataformas de sistema em um chip usando JavaScript. Johnny-Five traz paradigmas e técnicas familiares de programação JavaScript para o mundo real, com uma API idiomática, orientada a objetos, semelhante a jQuery, que torna o processo de mover um braço robótico como o de animar um elemento em uma página da web. o Johnny-Five faz o trabalho de abstrair a comunicação de modo que os componentes se comportem o mesmo independentemente da plataforma que está sendo usada.
 
 > * Data de criação: Lançado pela Bocoup em 2012 por Rick Waldron.
 
@@ -18,13 +22,18 @@ Nome: Sara Silva da Silva - saremedss - 20131011110185;
 
 ## Instalação e uso
 
-> * Descrever de forma resumida como instalar, demonstrando os comandos (ver Markdown sobre códigos): instalar o johnny-five: npm install johnny-five;
+> * Instalação
 
-
-> * Descrever de forma resumida como usar (compilar e executar), demonstrando os comandos (ver Markdown sobre códigos)
+Usando o Node.js, utilizaremos: 
 ```
-"Olá Mundo" com um simples LED piscando; O seguinte demonstra como fazer isso com o quadro Johnny-Five.
+npm install johnny-five --save;
+```
 
+> * Compilando e executando os comandos
+
+No codigo abaixo temos o codigo necessário para o "Olá Mundo" que é com um simples LED piscando. Em um arquivo OLAMUNDO.js 
+
+```
 var five = require("johnny-five");
 var board = new five.Board();
 
@@ -33,46 +42,44 @@ board.on("ready", function() {
   led.blink(500);
 });
 ```
+ 
+Para execução é necessária apenas a chamada do arquivo, e no Arduino por exemplo ele irá acender a led:
+```
+node OLAMUNDO.js
+```
 
 ## Sintaxe básica
 
 
 > *  Variáveis e constantes
 
-
 inicialização e comandos de atribuição : As variáveis são declaradas com a palavra chave var, como segue:
 ~~~~
 
-var i;
-var sum;   
-~~~~
-
-Também é possível declarar varias variáveis com a mesma palavra chave var:
-~~~~      
-
 var i, sum;
 ~~~~      
+
 E pode-se combinar a declaração da variável com sua inicialização:
 ~~~~
 
 var i = 0, j = 0, k = 0;
 var nome = "Fulano";
+const my_fav = 7;
 ~~~~
-
-Antes de usar uma variável em um programa JavaScript, deve declará-la.
 
 >> Tipos
+Os tipos podem ser divididos em duas categorias: tipo primitivo e de objeto.
 
-Os tipos em JavaScript podem ser divididos em duas categorias: tipo primitivo e de objeto.
-Os tipo primitivos incluem números, strings e valores booleanos.
-Os valores especiais null e undefined são valores primitivos mas não são números, nem string e nem booleanos.
-Qualquer valor em JavaScript que não seja número, string, booleano, null ou undefined é um objeto
-O typeof é um operador unário colocado antes de seu operando, o qual pode ser de qualquer tipo. Seu valor é uma string que               especifica o tipo do operando.
+      >>> Os tipos primitivos
+Incluem números, strings e valores booleanos. Os valores especiais null e undefined são valores primitivos mas não são números, nem string e nem booleanos.
+
+      >>>Objetos
+Qualquer valor que não seja número, string, booleano, null ou undefined é um objeto.
+~~~~  
+      var meuCarro = new Object();
+      meuCarro.fabricacao = "Ford";
+      meuCarro.ano = 1969;
 ~~~~
-
-typeof "foo"; // 'string'
-typeof 123;   // 'number'
-~~~~   
 
 >> Números
 
