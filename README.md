@@ -392,7 +392,3 @@ O Johnny-five é convertido para o Javascript que tambem é conhecido por també
         });
       });
 ```
-
-## Refe
-
-
