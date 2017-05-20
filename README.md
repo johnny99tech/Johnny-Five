@@ -157,7 +157,7 @@ Se você usa um valor não booleano onde é esperado um booleano, JavaScript con
 
       ! (a==3) // retorna falso
       ! (a!=3) // retorna verdadeiro
-      ~~~~
+~~~~
 
 
 > Operadores aritméticos
