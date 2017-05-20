@@ -224,7 +224,7 @@ Nesse caso podemos utilizar um else if ( outra condição ):
       }
 ~~~~
 
->  Estruturas de repetição
+> Estruturas de repetição
 
 >> for
 ~~~~    
