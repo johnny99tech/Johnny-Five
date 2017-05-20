@@ -179,6 +179,7 @@ Se você usa um valor não booleano onde é esperado um booleano, JavaScript con
       resultado = (a > b) ? "a é maior que b" : "b é maior que a";
       @@ -187,7 185,7 @@ A propriedade length determina o tamanho da string.
       }
+~~~~
 
 >> Condicional - switch
 ~~~~   
@@ -190,6 +191,7 @@ Se você usa um valor não booleano onde é esperado um booleano, JavaScript con
 > Estruturas de controle condicional
 
 Agora que você já sabe as estruturas condicionais if, else if e else, podemos apimentar um pouco mais seu código com algumas condições mais complexas.
+
 >> If (se)
 
 Para utilizar a estrutura if, precisamos da palavra if  ( pelo menos uma condição entre parênteses )  { quantas ações forem necessárias entre colchetes }.
@@ -201,6 +203,7 @@ Para utilizar a estrutura if, precisamos da palavra if  ( pelo menos uma condiç
 ~~~~
 
 >> If … else
+
 Também pode ocorrer de você ter uma ação contrária para ser executada, caso sua ação principal não seja verdadeira, por exemplo:
 Se o sol sair hoje, vou nadar; caso contrário, vou ler.
 Nesse caso temos duas ações dependendo de uma condição, uma das duas terá que ser executada.
@@ -226,7 +229,7 @@ Nesse caso podemos utilizar um else if ( outra condição ):
 
 > Estruturas de repetição
 
->> for
+>> For
 ~~~~    
 
       for (var i = 0; i < 5; i) {
@@ -314,9 +317,9 @@ Declaração: coloca um bloco de declarações em try, e especifica uma ou mais 
         } 
 ~~~~
 
- > Captura e lançamento de exceções
+> Captura e lançamento de exceções
   
- > Criar novas exeções
+> Criar novas exceções
   
 ## Sintaxe Funcional
 
@@ -326,7 +329,7 @@ Declaração: coloca um bloco de declarações em try, e especifica uma ou mais 
 
 > Categorias de exceções
 
->>TypeError
+>> TypeError
 >> RangeError
 >> EvalError
 ~~~~
