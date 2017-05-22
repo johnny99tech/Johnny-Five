@@ -264,6 +264,43 @@ Utiliza uma função para criar a classe. Para passar parâmetros para o constru
       }
 ~~~~
 
+> Objetos
+
+Espaços e quebras de linha não são importantes. Uma definição de objeto pode abranger várias linhas.
+Objetos são contêineres para valores nomeados chamados propriedades ou métodos.
+
+~~~~
+
+      //person é o objeto
+      //firstName é a propriedade
+      var person = {
+          firstName:"John",
+          lastName:"Doe",
+          age:50,
+          eyeColor:"blue"
+      };
+~~~~
+
+> Atributos (visibilidade: privado e público, escopo: classe e objeto)
+
+> Métodos (visibilidade: privado e público, escopo: classe e objeto)
+
+> Construtores
+
+Na sintaxe OO, é comum utilizar tipos de objetos (classes) personalizados. A função construtora Ventilador, contendo as propriedades velocidadeMaxima e ligado.
+~~~~
+
+      function Ventilador(velMax) {
+          this.velocidadeMaxima = velMax;
+          this.ligado = false;
+      }
+      //A palavra-chave this é responsável por iniciar o objeto adequadamente.
+      //velMax é o argumento
+~~~~
+> Herança
+> Polimorfismo
+> Sobrecarga
+
 ## Sintaxe Funcional
 
 > Descrever sintaxe básica do paradigma da linguagem contendo explicação e exemplo.
@@ -277,7 +314,6 @@ Utiliza uma função para criar a classe. Para passar parâmetros para o constru
 >> EvalError
 ~~~~
 
-      css
        try {
           myroutine(); // pode lançar três tipos de exceções
       } catch (e if e instanceof TypeError) {
@@ -319,7 +355,7 @@ A declaração try...catch coloca um bloco de declarações em try, e especifica
 > *Criar novas exeções
 ~~~~
 
-      css
+      
       function MeuErro(mensagem, solucao, localizacao) {  
           return new Error(messagem + " Solution:" + solucao +  " Location:" + localizacao);
       }
