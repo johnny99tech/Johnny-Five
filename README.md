@@ -82,23 +82,28 @@ Incluem números, strings e valores booleanos. Os valores especiais null e undef
 
 >> Objetos
 
-Qualquer valor que não seja número, string, booleano, null ou undefined é um objeto.
+Por definição com suas características e finalidades, sendo essa função um protótipo desse objeto, ou ainda o método construtor de uma classe.
+Ex: Cadeira possui tamanho, cor, material de que é feita, se tem rodas, se é giratória etc..
 ~~~~  
 
+      //nomeObjeto.nomePropriedadevar 
+      
       var meuCarro = new Object();
       meuCarro.fabricacao = "Ford";
       meuCarro.ano = 1969;
+      
+      car = {type:"Fiat", model:"500", color:"white"};
+      
+      //onde meuCarro é o Objeto
+      //fabricacao e ano são os propriedades do Objeto
 ~~~~
 
 >> Números
 
-Ao contrário de muitas linguagens, JavaScript não faz distinção entre valores inteiros e valores em ponto flutuante. Todos os números em JavaScript são representados como valores em ponto flutuante.  
+Ao contrário de muitas linguagens, JavaScript não faz distinção entre valores inteiros e valores em ponto flutuante. Todos os números são representados como valores em ponto flutuante.
 ~~~~
-
-      Literais inteiros:
-      @@ -86,9 86,9 @@ Nome: Sara Silva da Silva - saremedss - 20131011110185;
-      100.09
-      0.33333
+        
+      var inteiro = 100;
 ~~~~ 
 
 >> Strings
@@ -106,31 +111,48 @@ Ao contrário de muitas linguagens, JavaScript não faz distinção entre valore
 Para incluir uma string literal em um programa JavaScript, basta colocar os caracteres da string dentro de um par combinado de aspas simples ou duplas.
 ~~~~
 
-      "" string de cumprimento zero
-      @@ -107,33 107,26 @@ A propriedade length determina o tamanho da string.
-      "palavra".length // 7
+      var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 ~~~~
 
 >> Booleanos
 
 Os valores booleanos são representados por true e false.
+~~~~
+
+      var x = false;
+      var y = true;
+~~~~
 
 >> null e undefined
+
+-valor undefined
+      Utilizado quando uma variável não teve valor atribuído.
+-valor null
+      valor primitivo que representa a ausência intencional de um valor de objeto.
 
 A palavra chave null indica a ausência de um valor.    
 Mas também há um segundo valor que indica ausência de valor: undefined.   
 O valor indefinido (undefined) representa uma ausência mais profunda, é o valor de variáveis que não foram inicializadas.
+~~~~
 
+      var y; //undefined
+      var x = null; //null
+     
+~~~~
 >> Conversão
 
 A linguagem é muito flexível quanto aos tipos de valores que exige.
-As variáveis em JavaScript são não tipadas. Você pode atribuir um valor de qualquer tipo a uma variável e, posteriormente, atribuir um valor de tipo diferente para a mesma variável.
-JavaScript converte valores de um tipo para outro de forma livre.
-Se um programa espera uma string, por exemplo, e você fornece um número, ele converte o número em string automaticamente.
-Se você usa um valor não booleano onde é esperado um booleano, JavaScript converte adequadamente.
+Você pode atribuir um valor de qualquer tipo a uma variável e, posteriormente, atribuir um valor de tipo diferente para a mesma variável.
+~~~~
+
+      O método Date toString () faz o mesmo.
+      Date().toString() 
+
+      parseFloat() - Converte uma string em float.
+      parseInt() - Converte uma string em inteiro.
+~~~~
 
 > Operadores relacionais e lógicos:
-
 >> Relacionais:
 ~~~~
 
@@ -159,32 +181,37 @@ Se você usa um valor não booleano onde é esperado um booleano, JavaScript con
       ! (a!=3) // retorna verdadeiro
 ~~~~
 
-
 > Operadores aritméticos
 
 >> Condicional - if / else
 ~~~~
-
-      css
-      @@ -172,7 170,7 @@ A propriedade length determina o tamanho da string.
-      // executa este bloco else
+      
+      var n = 0;
+      if(n != 0){
+            console.log("par");
+      }
+      else{
+            console.log("impar");	
       }
 ~~~~       
 
 >> Operador Condicional Ternário
 
-É possível obter resultados semelhantes usando o operador condicional ternário condition ? expr1 : expr2.
+É possível obter resultados semelhantes usando o operador condicional ternário.
 ~~~~
 
-      resultado = (a > b) ? "a é maior que b" : "b é maior que a";
-      @@ -187,7 185,7 @@ A propriedade length determina o tamanho da string.
-      }
+      (a > b) ? "a é maior que b" : "b é maior que a";
 ~~~~
 
 >> Condicional - switch
 ~~~~   
-
-      @@ -203,10 201,12 @@ A propriedade length determina o tamanho da string.
+      
+      var n = 0;
+      if(n != 0){
+            console.log("par");
+      }
+      else{
+            console.log("impar");	
       }
 ~~~~
 
@@ -192,69 +219,49 @@ Se você usa um valor não booleano onde é esperado um booleano, JavaScript con
 
 Agora que você já sabe as estruturas condicionais if, else if e else, podemos apimentar um pouco mais seu código com algumas condições mais complexas.
 
->> If (se)
-
-Para utilizar a estrutura if, precisamos da palavra if  ( pelo menos uma condição entre parênteses )  { quantas ações forem necessárias entre colchetes }.
-~~~~
-
-      @@ -219,7 219,7 @@ A propriedade length determina o tamanho da string.
-      alert('Vou nadar!');
-      }      
-~~~~
-
->> If … else
-
-Também pode ocorrer de você ter uma ação contrária para ser executada, caso sua ação principal não seja verdadeira, por exemplo:
-Se o sol sair hoje, vou nadar; caso contrário, vou ler.
-Nesse caso temos duas ações dependendo de uma condição, uma das duas terá que ser executada.
-
-~~~~
-
-      @@ -237,10 237,11 @@ A propriedade length determina o tamanho da string.
-      alert('Vou ler');
-      }
-~~~~
-
 >> If … else if … else
 
-Outro fato que vai ocorrer constantemente em suas aplicações Javascript, é o fato de existir mais de uma condição, por exemplo:
+É o fato de existir mais de uma condição, por exemplo:
 Se eu acordar de madrugada, vou ler; se acordar de manhã, vou estudar; se acordar tarde vou assistir filme.
 Nesse caso podemos utilizar um else if ( outra condição ):
-~~~~
-
-      // Variáveis booleanas
-      @@ -258,16 259,16 @@ A propriedade length determina o tamanho da string.
-      }
-~~~~
 
 > Estruturas de repetição
 
 >> For
 ~~~~    
 
-      for (var i = 0; i < 5; i) {
-      // Will execute 5 times
+      for (var i = 0; i < 5; i++) {
+            // Will execute 5 times
       }
 ~~~~
 
-> Vetores, matrizes e strings
-
 >> Arrays
 
-Em JavaScript, arrays são um tipo especial de objeto que representam um conjunto ordenado de valores numerados.
+Em JavaScript, arrays são um tipo especial de objeto que representam um conjunto ordenado de valores numerados. Uma função é um objeto que tem código executável associado.  
 ~~~~
+      
+      var cars = [
+            "Saab",
+            "Volvo",
+            "BMW"
+      ];
 
-@@ -297,8 298,6 @@ Uma função é um objeto que tem código executável associado.
+      var pessoa = ["John", "Doe", 46];
 ~~~~
 
 ## Sintaxe OO
 
 > Classes
 
-No Javascript utilizamos uma função para criar a classe.
+Utiliza uma função para criar a classe. Para passar parâmetros para o construtor da classe.
 ~~~~
 
-@@ -347,28 346,31 @@ Para passar parâmetros para o construtor da classe.
+      class Rectangle {
+        constructor(height, width) {
+          this.height = height;
+          this.width = width;
+        }
+      }
 ~~~~
 ### Sintaxe básica de exceções:
 
