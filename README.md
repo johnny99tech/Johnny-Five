@@ -263,71 +263,7 @@ Utiliza uma função para criar a classe. Para passar parâmetros para o constru
         }
       }
 ~~~~
-### Sintaxe básica de exceções:
 
-> Categorias de exceções
-
->> throw
-
-Use a declaração throw para lançar uma exceção. Quando você lança uma exceção, você especifica a expressão contendo o valor a ser lançado:
-~~~~
-
-      throw true;       // tipo booleano
-      throw {toString: function() { return "Eu sou um objeto!"; } };
-~~~~
->> try...catch
-
-Declaração: coloca um bloco de declarações em try, e especifica uma ou mais respostas para uma exceção lançada. Se uma exceção é lançada, a declaração try...catch pegá-a.
-~~~~
-
-      try {
-      throw "myException"; // lança  uma exceção
-      }
-      catch (e) {
-      // declarações de lidar com as exceções
-      logMyErrors(e); // passar a exceção para o manipulador de erro
-      }
-
-~~~~
-> Captura e lançamento de exceções
-
-> Criar novas exeções
-
-## Sintaxe Funcional
-
-> Descrever sintaxe básica do paradigma da linguagem contendo explicação e exemplo.
-
-### Sintaxe básica de exceções:
-  
-> Categorias de exceções
-
->> throw
- 
-+Use a declaração throw para lançar uma exceção. Quando você lança uma exceção, você especifica a expressão contendo o valor a ser lançado:
- ~~~~
- 
-        throw true;       // tipo booleano
-        throw {toString: function() { return "Eu sou um objeto!"; } };
- ~~~~
- 
- >> try...catch
- 
-Declaração: coloca um bloco de declarações em try, e especifica uma ou mais respostas para uma exceção lançada. Se uma exceção é lançada, a declaração try...catch pegá-a.
- ~~~~
- 
-        try {
-          throw "myException"; // lança  uma exceção
-        }
-        catch (e) {
-          // declarações de lidar com as exceções
-          logMyErrors(e); // passar a exceção para o manipulador de erro
-        } 
-~~~~
-
-> Captura e lançamento de exceções
-  
-> Criar novas exceções
-  
 ## Sintaxe Funcional
 
 > Descrever sintaxe básica do paradigma da linguagem contendo explicação e exemplo.
